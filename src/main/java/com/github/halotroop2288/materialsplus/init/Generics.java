@@ -2,6 +2,7 @@ package com.github.halotroop2288.materialsplus.init;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+import com.github.halotroop2288.materialsplus.items.QuickBlockItem;
 import com.github.halotroop2288.materialsplus.items.QuickItemSet;
 
 import net.minecraft.block.Block;
@@ -53,6 +54,17 @@ public class Generics
 		{
 			QuickItemSet q = new QuickItemSet(material, true, true, true, true, true, true, true, true);
 			all = ArrayUtils.addAll(all, q.QuickBlockSet());
+		}
+		return all;
+	}
+	
+	public static Item[] allBlockItems()
+	{
+		Item[] all = new Item[] {};
+		for (Block block : Generics.allBlocksGeneric(Materials.blocks))
+		{
+			Item Q = new QuickBlockItem(block).setRegistryName(block.getRegistryName());
+			all = ArrayUtils.addAll(all, Q);
 		}
 		return all;
 	}

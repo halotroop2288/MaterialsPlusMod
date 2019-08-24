@@ -57,19 +57,12 @@ public class MaterialsPlus
 		@SubscribeEvent
 		public static void registerItems(final RegistryEvent.Register<Item> event)
 		{
+			Item[] Items = ArrayUtils.addAll(Generics.allMetalsGeneric(Materials.metals_alloys),Generics.allGemsGeneric(Materials.gemstones));
+			Item[] Items_and_BlockItems = ArrayUtils.addAll(Items, Generics.allBlockItems());
+			
 			event.getRegistry().registerAll
 			(
-				ArrayUtils.addAll
-				(
-					Generics.allMetalsGeneric
-					(
-						Materials.metals_alloys
-					),
-					Generics.allGemsGeneric
-					(
-						Materials.gemstones
-					)
-				)
+				Items_and_BlockItems
 			);
 			
 			logger.debug("MaterialsPlus items registered");

@@ -115,7 +115,7 @@ public class QuickItemSet
 		return new Block[]
 			{
 				this.genBlock ?	(Block)	block : (Block) null,
-				this.genOre ?	(Block)	ore : 	(Block)null
+				this.genOre ?	(Block)	ore : 	(Block)	null
 			};
 	}
 }
