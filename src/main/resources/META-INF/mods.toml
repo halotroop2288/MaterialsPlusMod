@@ -3,27 +3,27 @@ modLoader="javafml"
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
 loaderVersion="[28,)"
 # A URL to refer people to when problems occur with this mod
-issueTrackerURL="https://github.com/halotroop2288/mineralsplus-mod/issues" #optional
+issueTrackerURL="https://github.com/halotroop2288/materialsplus-mod/issues" #optional
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]]
 # The mod's id
-modId="mineralsplus"
+modId="materialsplus"
 # The version number of the mod - there's a few well known ${} variables usable here or just hard-code it
 version="${file.jarVersion}" #mandatory
  # A display name for the mod
-displayName="Minerals+" #mandatory
+displayName="Materials+" #mandatory
 # A URL for the "home page" for this mod, displayed in the mod UI
-displayURL="https://github.com/halotroop2288/mineralsplus-mod"
+displayURL="https://github.com/halotroop2288/materialsplus-mod"
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="MineralsPlus.png"
+logoFile="MaterialsPlus.png"
 # A text field displayed in the mod UI
 credits="Made by halotroop2288"
 # A text field displayed in the mod UI
 authors="halotroop2288"
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-This mod adds all the minerals you could ever think of, in a vein attempt to reduce the amount of mods that add their own minerals and just tend to cause confusion for users.
-Instead of adding your own minerals, consider adding this mod as a dependency and using tags in your crafting recipes. :)
-If a mineral you want to use is missing, please consider reporting it as an issue, or contributing a pull request for it.
-This mod may also be used stand-alone. It adds very minor functionality to all minerals, such as tools, blocks, and ores, so they're not entirely pointless by themselves. (But you really ought to use another mod in conjunction with this.)
+This mod adds all the naturally spawning materials you could ever think of to the game. Including their raw version (gems and ingots), ore, dust, broken version (shards and nuggets) and storage block.
+It also adds food and optionally, armor and tools for each material, to make it more of a Vanilla+ mod than a dependency for other mods (which is its original purpose).
+A full list of all materials added by this mod can be found on its Github page. (linked above)
+The aim of this mod is to reduce the amount of resources that need to be loaded in a mod pack, and make it easier for resource pack creators to be compatible with most mods at once. But it can also be used to spice up a very basic vanilla experience, if nothing else!
 '''

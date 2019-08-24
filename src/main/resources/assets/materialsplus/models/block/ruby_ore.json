@@ -1,0 +1,6 @@
+{
+	"parent": "materialsplus:block/ore",
+	"textures": {
+		"ore": "materialsplus:block/ore/ruby"
+	}
+}
