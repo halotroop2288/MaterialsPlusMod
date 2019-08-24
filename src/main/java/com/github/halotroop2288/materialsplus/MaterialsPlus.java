@@ -1,9 +1,11 @@
 package com.github.halotroop2288.materialsplus;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.github.halotroop2288.materialsplus.init.MaterialList;
+import com.github.halotroop2288.materialsplus.init.Generics;
+import com.github.halotroop2288.materialsplus.init.Materials;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -57,7 +59,17 @@ public class MaterialsPlus
 		{
 			event.getRegistry().registerAll
 			(
-				MaterialList.allItems()
+				ArrayUtils.addAll
+				(
+					Generics.allMetalsGeneric
+					(
+						Materials.metals_alloys
+					),
+					Generics.allGemsGeneric
+					(
+						Materials.gemstones
+					)
+				)
 			);
 			
 			logger.debug("MaterialsPlus items registered");
@@ -68,7 +80,10 @@ public class MaterialsPlus
 		{
 			event.getRegistry().registerAll
 			(
-				MaterialList.allBlocks()
+				Generics.allBlocksGeneric
+				(
+					Materials.blocks
+				)
 			);
 			
 			logger.debug("MaterialsPlus items registered");
